@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Logo } from './components/Logo';
+import { Form } from './components/Form';
+import { Listitems } from './components/ListItems';
+import { Footer } from './components/Footer';
+import { useState } from 'react';
+import { Packaginlist } from './components/PackagingList';
 
 function App() {
+  const [count , setCount] = useState(0)
+  const [item , setItem] = useState([
+  ])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <Logo/>
+     <Form item={item} setItem={setItem}/>
+     <Packaginlist item = {item} setItem={setItem} count={count} setCount={setCount}/>
+     <Footer item={item} count={count} setCount={setCount}/>
     </div>
   );
 }
