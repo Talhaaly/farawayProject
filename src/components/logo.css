@@ -98,6 +98,7 @@
 .dltBtn{
     background-color: #4c3423;
     cursor: pointer;
+    margin-right: 30px;
 }
 .dltBtn:hover{
     color: rgb(233, 181, 11) !important;

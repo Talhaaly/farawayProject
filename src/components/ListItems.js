@@ -38,7 +38,7 @@ const Item = ({singleItem, setItem, indx, itemList, count, setCount}) =>{
     return(
         <div className="listPar">
 
-        <input  onChange={()=> checkBoxhandler(singleItem.packed, indx)} type="checkbox" checked={singleItem.packed}/>
+        <input onChange={()=> checkBoxhandler(singleItem.packed, indx)} type="checkbox" checked={singleItem.packed}/>
         <p style={{color:"#b9a582", textDecoration: singleItem.packed? "line-through": "none"}}>{singleItem.quantity} {singleItem.userText}</p>
         <button className="dltBtn" onClick={() => deletePackingItem(indx)} style={{border:"none", fontSize:"16px", color:"#ea0402", fontWeight:"500",paddingTop:"3px", paddingBottom:"0"}}>X</button>
      </div>
